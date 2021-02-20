@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   version = "1.7.8-libre";
 
   src = fetchurl {
-    url = "https://github.com/notpushkin/Mailspring-Libre/releases/download/{$version}/mailspring-{$version}-amd64.deb";
+    url = "https://github.com/notpushkin/Mailspring-Libre/releases/download/${version}/mailspring-${version}-amd64.deb";
     sha256 = "e16f85c4f2df398976ac70b3139ff698ab2c5caff7ca346eab62d60860d63a84";
   };
 
@@ -34,9 +34,7 @@ stdenv.mkDerivation rec {
     alsaLib
     db
     glib
-    # We don't know why with trackerSupport the executable fail to launch, See:
-    # https://github.com/NixOS/nixpkgs/issues/106732
-    (gtk3.override {trackerSupport = false; })
+    gtk3
     libkrb5
     libsecret
     nss
