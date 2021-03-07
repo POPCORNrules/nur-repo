@@ -18,11 +18,11 @@
 
 stdenv.mkDerivation rec {
   pname = "mailspring";
-  version = "1.7.8-libre";
+  version = "1.8.0-libre";
 
   src = fetchurl {
     url = "https://github.com/notpushkin/Mailspring-Libre/releases/download/${version}/mailspring-${version}-amd64.deb";
-    sha256 = "e16f85c4f2df398976ac70b3139ff698ab2c5caff7ca346eab62d60860d63a84";
+    sha256 = "5cf5cf6cd541df6f50db3529c113ab19943ea43d17909a7997e2fb0ccfb1ca31";
   };
 
   nativeBuildInputs = [
